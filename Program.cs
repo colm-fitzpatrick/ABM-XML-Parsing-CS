@@ -58,8 +58,7 @@ namespace ABM_XML_Parsing
             };
 
             XmlDocument doc = new XmlDocument(); // creating xml document object
-            string currentFile = new System.Diagnostics.StackTrace(true).GetFrame(0).GetFileName(); // getting current filename
-            string path1 = System.IO.Path.GetDirectoryName(currentFile);
+            string path1 = System.IO.Path.GetFullPath(@"..\..\..\");
             string path2 = @"Data\Q2.xml";
             string path = Path.Combine(path1,path2); // creating path to xml file
             IDictionary<string, string> results = new Dictionary<string, string>(); // dictionary to store results
